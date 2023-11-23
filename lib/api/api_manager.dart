@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+
 import '../model/NewsResponse.dart';
 import '../model/SourceResponse.dart';
 import 'api_constants.dart';
@@ -8,10 +9,10 @@ import 'api_constants.dart';
 class ApiManager {
   static Future<SourceResponse?> getSources(String categoryId) async {
     /*
-    https://newsapi.org/v2/top-headlines/sources?apiKey=510b871a954849cebad6b3672d5804a5
+    https://newsapi.org/v2/top-headlines/sources?apiKey=0f8a08d1f7a84dad961fb1bd1c721e21
      */
     Uri url = Uri.https(ApiConstants.baseUrl, ApiConstants.sourceApi, {
-      'apiKey': '510b871a954849cebad6b3672d5804a5',
+      'apiKey': '0f8a08d1f7a84dad961fb1bd1c721e21',
       'category': categoryId,
     });
     try {
